@@ -14,5 +14,8 @@
 等休息好，我们继续把这个项目跑通，好吗？
 
 ##3.3
-- 安装了claude code
+- 安装了claude code工具
+- 熟悉了终端
+- 使用kimi-k2-thinking-turbo大模型并充值50哈哈哈期待技术提升
+
   
