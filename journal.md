@@ -15,6 +15,8 @@
 
 ##3.3
 - 安装了claude code工具
-- 熟悉了终端
-- 使用kimi-k2-thinking-turbo大模型并充值50哈哈哈期待技术提升
-- ![截屏2026-03-04 00.41.32](/Users/mawenhui/Desktop/截屏2026-03-04 00.41.32.png)
+- 熟悉了终端cd ls
+- 使用kimi-k2-thinking-turbo大模型
+- 在现有的 Spring Boot 项目中添加第一个 Hello World 的 REST 接口
+- ![hello world](images/hello%20world.png)
+  
