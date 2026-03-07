@@ -19,4 +19,9 @@
 - 使用kimi-k2-thinking-turbo大模型
 - 在现有的 Spring Boot 项目中添加第一个 Hello World 的 REST 接口
 - ![hello world](images/hello%20world.png)
-  
+
+## 3.7
+- 正式开始学习java知识点，学到类和对象进阶
+- 熟悉了Obsidian，但是进度还是太慢了
+- 能把代码看懂就行，所以我决定代码看懂后截图丢给AI让他给我做笔记，一个个敲太慢了
+- 决定下周一开始参加招聘会，并开始投简历，是的
