@@ -1,0 +1,69 @@
+spring:
+  application:
+    name: saas-system
+
+  # 数据库配置（H2内存数据库）
+  datasource:
+    url: jdbc:h2:mem:saas;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  # JPA配置
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+
+  # Redis配置
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+      timeout: 2000ms
+      connect-timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 1000ms
+
+  # 缓存配置
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000  # 默认10分钟（毫秒）
+      use-key-prefix: true
+      key-prefix: cache:saas
+      cache-null-values: true  # 允许缓存空值，防止缓存穿透
+      enable-statistics: true
+
+# 服务器配置
+server:
+  port: 8080
+
+# 日志配置
+logging:
+  level:
+    com.example.demo: DEBUG
+    org.springframework.cache: DEBUG
+    org.springframework.data.redis: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{50}] - %msg%n"
+
+# 应用配置
+app:
+  cache:
+    # 缓存过期时间（毫秒）
+    user-ttl: 300000      # 用户数据5分钟
+    product-ttl: 600000   # 商品数据10分钟
+    list-ttl: 120000      # 列表数据2分钟
+    null-ttl: 60000       # 空值缓存1分钟（防穿透）
